@@ -1,5 +1,6 @@
 class CreateArticles < ActiveRecord::Migration[5.1]
-  def change
+  def up
+    drop_table :articles
     create_table :articles do |t|
       t.text :title
       t.text :content
