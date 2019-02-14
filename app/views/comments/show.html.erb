@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+
+<p>
+  <strong>Hello</strong>
+  <%= link_to  @comment.user.name, @comment.user %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @comment.message %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @comment.user.name %>
+</p>
+
+<p>
+  <strong>Article:</strong>
+  <%= link_to  @comment.article.title, @comment.article %>
+</p>
+
+<p>
+  <strong>Created at:</strong>
+  <%= @comment.article.created_at %>
+</p>
+
+<%= link_to 'Edit', edit_comment_path(@comment) %> |
+<%= link_to 'Back', comments_path %>
